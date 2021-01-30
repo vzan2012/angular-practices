@@ -20,6 +20,30 @@
       <h3>Assignment 1: Practising Components</h3>
       <app-success-alert></app-success-alert>
       <app-warning-alert></app-warning-alert>
+      <hr />
+      <h3>Assignment 2: Practising Databinding</h3>
+      <label for="">Username</label>&nbsp;<input
+        type="text"
+        name=""
+        id=""
+        class="formcontrol"
+        [(ngModel)]="userName"
+      />&nbsp;
+      <!-- <button
+        class="btn btn-danger"
+        [disabled]="userName === ''"
+        (click)="onReset()"
+      >
+        Reset
+      </button> -->
+      <button
+        class="btn btn-danger"
+        [disabled]="userName === ''"
+        (click)="userName = ''"
+      >
+        Reset
+      </button>
+      <p>{{ userName }}</p>
     </div>
   </div>
 </div>

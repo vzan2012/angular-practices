@@ -11,4 +11,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   titleName = 'Welcome la-app';
+
+  userName: string = '';
+
+  onReset() {
+    this.userName = ''
+  }
 }
