@@ -44,6 +44,28 @@
         Reset
       </button>
       <p>{{ userName }}</p>
+      <br />
+      <hr />
+      <br />
+      <h3>Assignment 3: Practising Directives</h3>
+      <button (click)="onShowDetails()">Display Details</button>
+      <p *ngIf="showDetails">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, sint.
+      </p>
+
+      <div
+        *ngFor="let result of clickArray; let index = index"
+        [ngStyle]="{
+          backgroundColor: index >= 4 ? 'blue' : 'transparent'
+        }"
+        [ngClass]="{ 'log-Fifth': index >= 4 }"
+      >
+        {{ result }}
+      </div>
+
+      <br />
+      <br />
+      <br />
     </div>
   </div>
 </div>
