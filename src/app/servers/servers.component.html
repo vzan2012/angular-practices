@@ -29,7 +29,21 @@
 {{ serverName }} -->
 <br />
 <!-- {{ allowNewServer }} <br /> -->
-{{ serverCreationStatus }}
+<!-- {{ serverCreationStatus }} -->
 <!-- <p [innerText]="allowNewServer"></p> -->
-<br /><app-server></app-server>
-<app-server></app-server>
+
+<!-- Structural Directive  -->
+<!-- <p *ngIf="serverCreated">
+  Server was created!!! Name is {{ serverName }}
+</p> -->
+<p *ngIf="serverCreated; else noServer">
+  Server was created!!! Name is {{ serverName }}
+</p>
+<ng-template #noServer>
+  <p>No Server was created !!!</p>
+</ng-template>
+
+<br />
+<!-- <app-server></app-server>
+<app-server></app-server> -->
+<app-server *ngFor="let server of servers"></app-server>

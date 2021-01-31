@@ -1,5 +1,14 @@
 <!-- <p>Server Component - is working</p> -->
-<p>
+<!-- <p>
+  {{ "Server" }} with ID {{ serverId }} is {{ serverStatus }} -
+  {{ getServerStatus() }}
+</p> -->
+
+<!-- Attribute Directive  -->
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: serverStatus === 'Online' }"
+>
   {{ "Server" }} with ID {{ serverId }} is {{ serverStatus }} -
   {{ getServerStatus() }}
 </p>
